@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirthdayTransfer", "BirthdayTransfer\BirthdayTransfer.csproj", "{48025EF8-B7A8-4ACB-808A-1C1BA5992E8B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48025EF8-B7A8-4ACB-808A-1C1BA5992E8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48025EF8-B7A8-4ACB-808A-1C1BA5992E8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48025EF8-B7A8-4ACB-808A-1C1BA5992E8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48025EF8-B7A8-4ACB-808A-1C1BA5992E8B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A338600-26F5-42DB-B3E2-7A850A4F32A8}
+	EndGlobalSection
+EndGlobal
