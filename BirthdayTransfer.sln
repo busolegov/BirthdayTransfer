@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirthdayTransfer", "BirthdayTransfer\BirthdayTransfer.csproj", "{48025EF8-B7A8-4ACB-808A-1C1BA5992E8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BirthdayTransfer", "BirthdayTransfer\BirthdayTransfer.csproj", "{48025EF8-B7A8-4ACB-808A-1C1BA5992E8B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9B81B144-DBB7-4384-8530-3CE0A40C2476} = {9B81B144-DBB7-4384-8530-3CE0A40C2476}
+		{DFE58619-627A-440B-999B-64C939B5AD20} = {DFE58619-627A-440B-999B-64C939B5AD20}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirthdayTransfer_dll", "BirthdayTransfer_dll\BirthdayTransfer_dll.csproj", "{9B81B144-DBB7-4384-8530-3CE0A40C2476}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalDavYandexLibrary", "..\..\VkTest\CalDavYandexCalendar\CalDavYandexLibrary\CalDavYandexLibrary.csproj", "{DFE58619-627A-440B-999B-64C939B5AD20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,14 @@ Global
 		{48025EF8-B7A8-4ACB-808A-1C1BA5992E8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48025EF8-B7A8-4ACB-808A-1C1BA5992E8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48025EF8-B7A8-4ACB-808A-1C1BA5992E8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B81B144-DBB7-4384-8530-3CE0A40C2476}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B81B144-DBB7-4384-8530-3CE0A40C2476}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B81B144-DBB7-4384-8530-3CE0A40C2476}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B81B144-DBB7-4384-8530-3CE0A40C2476}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFE58619-627A-440B-999B-64C939B5AD20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFE58619-627A-440B-999B-64C939B5AD20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFE58619-627A-440B-999B-64C939B5AD20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFE58619-627A-440B-999B-64C939B5AD20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

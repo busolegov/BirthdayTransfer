@@ -8,4 +8,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="VkNet" Version="1.71.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BirthdayTransfer_dll\BirthdayTransfer_dll.csproj" />
+  </ItemGroup>
+
 </Project>
