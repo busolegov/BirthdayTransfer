@@ -13,11 +13,11 @@ namespace BirthdayTransfer_dll
         /// <summary>
         /// Логин ВКонтакте
         /// </summary>
-        private string _vkLogin;
+        private readonly string _vkLogin;
         /// <summary>
         /// Пароль ВКонтакте
         /// </summary>
-        private string _vkPass;
+        private readonly string _vkPass;
         public VkApi Api { get; set; } = new VkApi();
         /// <summary>
         /// Список друзей

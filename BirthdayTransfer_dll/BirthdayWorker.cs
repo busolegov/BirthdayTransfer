@@ -6,14 +6,18 @@ namespace BirthdayTransfer_dll
     {
         private List<VkUser> _vkUsers = new List<VkUser>();
 
+        /// <summary>
+        /// Почта яндекс аккаунта
+        /// </summary>
         public string Email { get; set; }
-        private string _login = "n0rma.jeane";
-
+        /// <summary>
+        /// Пароль яндекс приложения
+        /// </summary>
         public string Pass { get; set; }
-        private string _pass = "ildmkjwhtcygetaq";
-
+        /// <summary>
+        /// Ссылка CalDav календаря
+        /// </summary>
         public string CalDavLink { get; set; }
-        private string _mainCalendarPath = "https://caldav.yandex.ru/calendars/n0rma.jeane%40yandex.ru/events-20085745/";
 
         public BirthdayWorker(List<VkUser> vkUsers, string email, string pass, string calDavLink)
         {
@@ -23,10 +27,14 @@ namespace BirthdayTransfer_dll
             CalDavLink=calDavLink;
         }
 
+        /// <summary>
+        /// Добавление др юзеров из списка в календарь
+        /// </summary>
+        /// <returns></returns>
         public async Task PushEventToCalendarAsync()
         {
             var mainCalendarUri = new Uri(CalDavLink);
-            var client = new Client(mainCalendarUri, _login, _pass);
+            var client = new Client(mainCalendarUri, Email, Pass);
             var allCalendars = await client.GetCalendarsAsync();
             var currentCalendar = allCalendars.First();
 
@@ -35,10 +43,6 @@ namespace BirthdayTransfer_dll
                 currentCalendar.CreateEvent($"День рождения - {user.FirstName} {user.LastName}",
                                             user.BirthDate, user.BirthDate.AddHours(1),"location");
                 var results = client.SaveChangesAsync(currentCalendar).Result;
-                //Save all changes and take results of conservation
-                
-                //Console.WriteLine($"День рождения {user.FirstName} {user.LastName} / {user.BirthDate}" +
-                //                  $" добавлен в календарь.");
             }
         }
     }

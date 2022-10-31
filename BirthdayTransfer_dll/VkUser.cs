@@ -2,7 +2,7 @@
 {
     public class VkUser
     {
-        public string Name { get; set; }
+        public string? Name { get; set; }
         /// <summary>
         /// Имя именинника
         /// </summary>
@@ -15,12 +15,9 @@
         /// Дата дня рождения
         /// </summary>
         public DateTime BirthDate { get; set; }
-        private readonly string? _birthDay;
+        private readonly string _birthDay;
 
-        public VkUser()
-        {
-
-        }
+        public VkUser() { }
         public VkUser(string firstName, string lastName, string birthDate)
         {
             FirstName=firstName;

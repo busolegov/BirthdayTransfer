@@ -20,18 +20,19 @@ namespace BirthdayTransfer
         {
 
         }
-
         internal void textBox1_TextChanged(object sender, EventArgs e)
         {
         }
-
         internal void textBox2_TextChanged(object sender, EventArgs e)
         {
         }
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
 
+        }
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "" && textBox2.Text != "") //TODO dont work
+            if (textBox1.Text != "" && textBox2.Text != "")
             {
                 vkWorker = new VkWorker(textBox1.Text, textBox2.Text);
                 try
@@ -76,18 +77,6 @@ namespace BirthdayTransfer
                 MessageBox.Show(mes, caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             BirthdayWorker birthdayWorker;
@@ -106,7 +95,7 @@ namespace BirthdayTransfer
 
                 importTask.GetAwaiter().OnCompleted(() =>
                 {
-                    MessageBox.Show("Импорт успешно завершен!","Успех!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Экспорт успешно завершен!", "Успех!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     foreach (TextBox tb in this.Controls.OfType<TextBox>().ToArray())
                     {
                         tb.Clear();
@@ -120,10 +109,11 @@ namespace BirthdayTransfer
                 string mes = "Не все поля заполнены!";
                 MessageBox.Show(mes, caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            checkedListBox1.ClearSelected();
-            
         }
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
